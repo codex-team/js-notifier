@@ -19,7 +19,7 @@ module.exports = {
         use : [{
             loader: 'babel-loader',
             options: {
-              presets: [__dirname + '/node_modules/babel-preset-es2015']
+              presets: ['es2015']
             }
           }]
       },
