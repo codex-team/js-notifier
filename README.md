@@ -45,7 +45,7 @@ notifier.show({
   message: 'Refresh the page'
 })
 ```
-
+![Notify](https://github.com/codex-team/js-notifier/blob/initial/docs/examples/notify.png)
 ```javascript
 notifier.show({
   message: 'Message was sent',
@@ -53,14 +53,14 @@ notifier.show({
   time: 5000
 })
 ```
-
+![Success](https://github.com/codex-team/js-notifier/blob/initial/docs/examples/success.png)
 ```javascript
 notifier.show({
   message: 'Sory, server is busy now',
   style: 'error'
 })
 ```
-
+![Error](https://github.com/codex-team/js-notifier/blob/initial/docs/examples/error.png)
 ```javascript
 notifier.show({
   message: 'Delete account?',
@@ -70,7 +70,7 @@ notifier.show({
   okHandler: account.delete
 })
 ```
-
+![Confirm](https://github.com/codex-team/js-notifier/blob/initial/docs/examples/confirm.png)
 ```javascript
 notifier.show({
   message: 'Enter your email',
@@ -81,6 +81,7 @@ notifier.show({
   placeholder: 'team@ifmo.su'
 })
 ```
+![Prompt](https://github.com/codex-team/js-notifier/blob/initial/docs/examples/prompt.png)
 
 ## Custom styles
-You can easily customize notifications appearance. Read more about it here
+You can easily customize notifications appearance. Read more about it [here](https://github.com/codex-team/js-notifier/blob/initial/docs/styles.md)
