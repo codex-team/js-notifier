@@ -1,9 +1,5 @@
 .cdx-notifies__notification {
 
-    &--notify::before {
-        background: transparent;
-    }
-
     &--success {
         background: #fafffe;
 

@@ -1,5 +1,10 @@
-/**
- * Notifications tips module
+/*!
+ * Codex JavaScript Notification module
+ * https://github.com/codex-team/js-notifier
+ *
+ * Codex Team - https://ifmo.su
+ *
+ * MIT License | (c) Codex 2017
  */
 module.exports = (function () {
 
@@ -24,14 +29,13 @@ module.exports = (function () {
 
   }
 
-  /**
-   * @param {Object} options:
-   *
-   * @property {String} type    - type of notification. Just adds {CSS_.notification + '--' + type} class. 'notify' by default
-   * @property {String} message - text to notify, can contains HTML
-   * @property {String} time    - expiring time
-   */
   function show(options) {
+
+    if (!options.message) {
+
+      return;
+
+    }
 
     prepare_();
     let notify = null,

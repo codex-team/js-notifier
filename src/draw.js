@@ -16,16 +16,14 @@ module.exports = function () {
     let notify  = document.createElement('DIV'),
         cross   = document.createElement('DIV'),
         message = options.message,
-        style    = options.style || 'notify';
-
-    if (!message) {
-
-      return;
-
-    }
+        style   = options.style;
 
     notify.classList.add(CSS_.notification);
-    notify.classList.add(CSS_.notification + '--' + style);
+    if (style) {
+
+      notify.classList.add(CSS_.notification + '--' + style);
+
+    }
     notify.innerHTML = message;
 
     cross.classList.add(CSS_.crossBtn);
@@ -105,6 +103,16 @@ module.exports = function () {
     if (options.placeholder) {
 
       input.setAttribute('placeholder', options.placeholder);
+
+    }
+    if (options.default) {
+
+      input.value = options.default;
+
+    }
+    if (options.inputType) {
+
+      input.type = options.inputType;
 
     }
 
