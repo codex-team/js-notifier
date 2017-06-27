@@ -34,3 +34,4 @@ This is rules for our default `success` notification
     background: #41ffb1;
 }
 ```
+![Success](https://github.com/codex-team/js-notifier/blob/initial/docs/examples/success.png)
