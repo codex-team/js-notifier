@@ -65,7 +65,7 @@ module.exports = function () {
 
     }
 
-    if (!okHandler || typeof okHandler !== 'function') {
+    if (okHandler && typeof okHandler === 'function') {
 
       okBtn.addEventListener('click', okHandler);
 
@@ -102,15 +102,25 @@ module.exports = function () {
 
     input.classList.add(CSS_.input);
 
+    if (options.placeholder) {
+
+      input.setAttribute('placeholder', options.placeholder);
+
+    }
+
     if (cancelHandler && typeof cancelHandler === 'function') {
 
       crossBtn.addEventListener('click', cancelHandler)
 
     }
 
-    if (!okHandler || typeof okHandler !== 'function') {
+    if (okHandler && typeof okHandler === 'function') {
 
-      okBtn.addEventListener('click', okHandler);
+      okBtn.addEventListener('click', function () {
+
+        okHandler(input.value);
+
+      });
 
     }
 
