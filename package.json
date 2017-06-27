@@ -1,0 +1,33 @@
+{
+  "name": "codex-notifier",
+  "version": "1.0.0",
+  "description": "Simple notifications for your website",
+  "main": "./notifier.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codex-team/js-notifier.git"
+  },
+  "author": "Codex-Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codex-team/js-notifier/issues"
+  },
+  "homepage": "https://github.com/codex-team/js-notifier#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^2.6.1",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-loader": "^2.0.6",
+    "postcss-smart-import": "^0.7.4",
+    "postcss-nested": "^2.0.2",
+    "postcss-nested-ancestors": "^1.0.0",
+    "postcss-nesting": "^4.0.1"
+  }
+}
