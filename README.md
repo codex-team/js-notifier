@@ -3,6 +3,26 @@ Lightweight notification module for websites
 
 ## Instalation
 
+### Install via npm
+Install package
+```
+npm install codex-notifier --save
+```
+
+##### Connect with Webpack
+Require module in your application
+```javascript
+var notifier = require('exports-loader?notifier!codex-notifier');
+```
+
+Import styles
+```css
+@import url('~codex-notifier/notifier.css');
+```
+
+You will need [exports-loader](https://www.npmjs.com/package/exports-loader) and [css-loader]('https://www.npmjs.com/package/css-loader').
+
+
 ### Install directly
 1. Download `notifier.js` and `notifier.css` files
 2. Add them to your page
