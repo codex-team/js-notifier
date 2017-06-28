@@ -4,34 +4,34 @@
     bottom: 20px;
     left: 20px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-
-    /* Default notification styles */
-    &__notification {
-         position: relative;
-         width: 220px;
-         margin-top: 15px;
-         padding: 13px 16px;
-         background: #fff;
-         box-shadow: 0 11px 17px 0 rgba(23,32,61,.13);
-         border-radius: 5px;
-         font-size: 14px;
-         line-height: 1.4em;
-         word-wrap: break-word;
-
-        &::before {
-            content: '';
-            position: absolute;
-            display: block;
-            top: 0;
-            left: 0;
-            width: 3px;
-            height: calc(100% - 6px);
-            margin: 3px;
-            border-radius: 5px;
-            background: transparent;
-        }
-
 }
+/* Default notification styles */
+.cdx-notify {
+     position: relative;
+     width: 220px;
+     margin-top: 15px;
+     padding: 13px 16px;
+     background: #fff;
+     box-shadow: 0 11px 17px 0 rgba(23,32,61,.13);
+     border-radius: 5px;
+     font-size: 14px;
+     line-height: 1.4em;
+     word-wrap: break-word;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: calc(100% - 6px);
+        margin: 3px;
+        border-radius: 5px;
+        background: transparent;
+    }
+
+
 
     /* Cross button */
     &__cross {

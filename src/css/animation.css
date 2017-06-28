@@ -18,7 +18,7 @@
     }
 }
 
-.cdx-notifies__notification--bounce-in {
+.cdx-notify--bounce-in {
     animation-name: bounceIn;
     animation-duration: 600ms;
     animation-iteration-count: 1;

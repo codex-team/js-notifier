@@ -11,7 +11,7 @@ module.exports = (function () {
   require('./css/main.css');
 
   let draw = require('./draw.js'),
-      bounceInClass = 'cdx-notifies__notification--bounce-in';
+      bounceInClass = 'cdx-notify--bounce-in';
 
   let wrapper_ = null;
 

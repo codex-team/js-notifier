@@ -1,6 +1,5 @@
 # JavaScript Notifier
-Light-weight notification module for your website
-
+Lightweight notification module for websites
 
 ## Instalation
 
@@ -22,7 +21,7 @@ You should pass there object with notification properties
 #### General properties
 - `message` — notification message (can contains HTML)
 - `type` — type of notification: `alert`, `confirm` or `prompt`. `Alert` by default
-- `style` — just add `'cdx-notifies__notification--' + style` class. We have some default styles: `success` and `error` 
+- `style` — just add `'cdx-notify--' + style` class. We have some default styles: `success` and `error` 
 - `time` — notification expire time in ms. Only for `alert` notifies expires (8s by default)
 
 #### Confirm notifications properties

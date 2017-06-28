@@ -2,13 +2,13 @@ module.exports = function () {
 
   const CSS_ = {
     wrapper : 'cdx-notifies',
-    notification : 'cdx-notifies__notification',
-    crossBtn: 'cdx-notifies__cross',
-    okBtn: 'cdx-notifies__button--confirm',
-    cancelBtn: 'cdx-notifies__button--cancel',
-    input: 'cdx-notifies__input',
-    btn: 'cdx-notifies__button',
-    btnsWrapper: 'cdx-notifies__btns-wrapper'
+    notification : 'cdx-notify',
+    crossBtn: 'cdx-notify__cross',
+    okBtn: 'cdx-notify__button--confirm',
+    cancelBtn: 'cdx-notify__button--cancel',
+    input: 'cdx-notify__input',
+    btn: 'cdx-notify__button',
+    btnsWrapper: 'cdx-notify__btns-wrapper'
   };
 
   let alert = function (options) {
