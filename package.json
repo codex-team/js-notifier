@@ -1,6 +1,6 @@
 {
   "name": "codex-notifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple notifications for your website",
   "main": "./notifier.js",
   "scripts": {
