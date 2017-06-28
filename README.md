@@ -55,7 +55,7 @@ notifier.show({
 ![Success](https://github.com/codex-team/js-notifier/blob/initial/docs/examples/success.png)
 ```javascript
 notifier.show({
-  message: 'Sory, server is busy now',
+  message: 'Sorry, server is busy now',
   style: 'error'
 })
 ```
