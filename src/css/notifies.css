@@ -1,0 +1,21 @@
+.cdx-notify {
+
+    &--success {
+        background: #fafffe;
+
+        &::before {
+            background: #41ffb1;
+        }
+
+    }
+
+    &--error {
+        background: #fffbfb;
+
+        &::before {
+            background: #fb5d5d;
+        }
+
+    }
+
+}
