@@ -9,7 +9,7 @@ Install package
 npm install codex-notifier --save
 ```
 
-##### Connect with Webpack
+#### Connect with Webpack
 Require module in your application
 ```javascript
 var notifier = require('exports-loader?notifier!codex-notifier');
@@ -35,13 +35,13 @@ Add script and stylesheets files from GitHub
 ```
 
 ## Usage
-Module has only one public method — `show`. 
+Module has only one public method — `show`.
 You should pass there object with notification properties
 
 #### General properties
 - `message` — notification message (can contains HTML)
 - `type` — type of notification: `alert`, `confirm` or `prompt`. `Alert` by default
-- `style` — just add `'cdx-notify--' + style` class. We have some default styles: `success` and `error` 
+- `style` — just add `'cdx-notify--' + style` class. We have some default styles: `success` and `error`
 - `time` — notification expire time in ms. Only for `alert` notifies expires (8s by default)
 
 #### Confirm notifications properties
