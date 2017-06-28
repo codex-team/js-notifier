@@ -10,12 +10,12 @@
          position: relative;
          width: 220px;
          margin-top: 15px;
-         padding: 15px 28px;
+         padding: 13px 16px;
          background: #fff;
-         box-shadow: 0 11px 17px 0 rgba(23, 32, 61, 0.13);
+         box-shadow: 0 11px 17px 0 rgba(23,32,61,.13);
          border-radius: 5px;
          font-size: 14px;
-         line-height: 1.5em;
+         line-height: 1.4em;
          word-wrap: break-word;
 
         &::before {
@@ -74,13 +74,13 @@
     &__btns-wrapper {
         display: flex;
         flex-flow: row nowrap;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     &__button {
-        border: 1px solid;
+        border: none;
         border-radius: 3px;
-        font-size: 15px;
+        font-size: 13px;
         padding: 5px 10px;
         cursor: pointer;
 
@@ -89,27 +89,23 @@
         }
 
         &--cancel {
-            background: #fdfdfd;
-            border-color: #f5f5f5;
-            box-shadow: 0 2px 1px 0 rgba(16, 19, 29, 0.00);
+            background: #f2f5f7;
+            box-shadow: 0 2px 1px 0 rgba(16,19,29,0);
             color: #656b7c;
 
             &:hover {
-                 background: color(#f5f5f5 blackness(+1%));
-                 border-color: color(#f5f5f5 blackness(+10%));
+                 background: color(#f5f5f5 blackness(+3%));
             }
 
         }
 
         &--confirm {
             background: #34c992;
-            border-color: #48b68b;
-            box-shadow: 0 1px 1px 0 rgba(18, 49, 35, 0.05);
-            color: #ffffff;
+            box-shadow: 0 1px 1px 0 rgba(18,49,35,.05);
+            color: #fff;
 
             &:hover {
                 background: color(#34c992 blackness(+10%));
-                border-color: color(#48b68b blackness(+10%));
             }
         }
 
@@ -120,11 +116,10 @@
     &__input {
         max-width: 130px;
         padding: 5px 10px;
-        background: #fdfdfd;
-        border: 1px solid #e5e7ea;
+        background: #f7f7f7;
+        border: 0;
         border-radius: 3px;
-        box-shadow: inset 0 1px 2px 0 rgba(89, 107, 158, 0.12);
-        font-size: 15px;
+        font-size: 13px;
         color: #656b7c;
         outline: none;
 
