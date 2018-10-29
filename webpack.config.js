@@ -1,60 +1,28 @@
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 module.exports = {
-
-  entry: './src/notifies.js',
-
-  output: {
-    filename: 'notifier.js',
-    library: 'notifier'
-  },
-
-  module : {
-
+  entry: './src/notifier.js',
+  module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules)/,
-        use : [{
-            loader: 'babel-loader',
-            options: {
-              presets: ['es2015']
-            }
-          }]
+        exclude: /node_modules/,
+        use: ['babel-loader']
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract([
-          {
-            loader: 'css-loader',
-            options: {
-              minimize: 1,
-              importLoaders: 1
-            }
-          },
-          'postcss-loader'
-        ])
-      },
-    ]
-
-  },
-
-  plugins : [
-    new ExtractTextPlugin('notifier.css'),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
+        exclude: /node_modules/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader"
+        ]
       }
-    })
-  ],
-
-  devtool: "source-map",
-
-  watch: true,
-
-  watchOptions: {
-    aggragateTimeout: 50
+    ]
+  },
+  output: {
+    path: __dirname + '/dist',
+    publicPath: '/',
+    filename: 'bundle.js',
+    library: "notifier",
+    libraryTarget: 'umd'
   }
-
 };

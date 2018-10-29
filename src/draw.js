@@ -11,19 +11,18 @@ module.exports = function () {
     btnsWrapper: 'cdx-notify__btns-wrapper'
   };
 
-  let alert = function (options) {
-
-    let notify  = document.createElement('DIV'),
-        cross   = document.createElement('DIV'),
+  const alert = function alert(options) {
+    let notify = document.createElement('DIV'),
+        cross = document.createElement('DIV'),
         message = options.message,
-        style   = options.style;
+        style = options.style;
 
     notify.classList.add(CSS_.notification);
+
     if (style) {
-
       notify.classList.add(CSS_.notification + '--' + style);
-
     }
+
     notify.innerHTML = message;
 
     cross.classList.add(CSS_.crossBtn);
@@ -32,10 +31,9 @@ module.exports = function () {
     notify.appendChild(cross);
 
     return notify;
+  };
 
-  }
-
-  let confirm = function (options) {
+  const confirm = function confirm(options) {
 
     let notify = alert(options);
 
@@ -57,16 +55,12 @@ module.exports = function () {
     cancelBtn.classList.add(CSS_.cancelBtn);
 
     if (cancelHandler && typeof cancelHandler === 'function') {
-
-      cancelBtn.addEventListener('click', cancelHandler)
-      crossBtn.addEventListener('click', cancelHandler)
-
+      cancelBtn.addEventListener('click', cancelHandler);
+      crossBtn.addEventListener('click', cancelHandler);
     }
 
     if (okHandler && typeof okHandler === 'function') {
-
       okBtn.addEventListener('click', okHandler);
-
     }
 
     okBtn.addEventListener('click', notify.remove.bind(notify));
@@ -78,10 +72,9 @@ module.exports = function () {
     notify.appendChild(btnsWrapper);
 
     return notify;
+  };
 
-  }
-
-  let prompt = function (options) {
+  const prompt = function prompt(options) {
 
     let notify = alert(options);
 
@@ -101,25 +94,19 @@ module.exports = function () {
     input.classList.add(CSS_.input);
 
     if (options.placeholder) {
-
       input.setAttribute('placeholder', options.placeholder);
-
     }
+
     if (options.default) {
-
       input.value = options.default;
-
     }
+
     if (options.inputType) {
-
       input.type = options.inputType;
-
     }
 
     if (cancelHandler && typeof cancelHandler === 'function') {
-
       crossBtn.addEventListener('click', cancelHandler)
-
     }
 
     if (okHandler && typeof okHandler === 'function') {
@@ -140,11 +127,9 @@ module.exports = function () {
     notify.appendChild(btnsWrapper);
 
     return notify;
+  };
 
-
-  }
-
-  let wrapper = function () {
+  const getWrapper = function getWrapper() {
 
     let wrapper = document.createElement('DIV');
 
@@ -152,13 +137,13 @@ module.exports = function () {
 
     return wrapper;
 
-  }
+  };
 
   return {
-    alert: alert,
-    confirm: confirm,
-    prompt: prompt,
-    wrapper: wrapper
+    alert,
+    confirm,
+    prompt,
+    getWrapper
   }
 
-}()
+}();
