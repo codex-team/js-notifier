@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "one-var": ["error", {
+      "var": "always",
+      "let": "consecutive",
+      "const": "never"
+    }]
+  },
+  "extends": [
+    "codex"
+  ]
+}

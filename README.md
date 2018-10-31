@@ -17,29 +17,7 @@ npm install codex-notifier --save
 Require module in your application
 
 ```javascript
-var notifier = require('exports-loader?notifier!codex-notifier');
-```
-
-Import styles
-
-```css
-@import url('~codex-notifier/notifier.css');
-```
-
-You will need [exports-loader](https://www.npmjs.com/package/exports-loader) and [css-loader]('https://www.npmjs.com/package/css-loader').
-
-### Install directly
-
-1. Download `notifier.js` and `notifier.css` files
-2. Add them to your page
-
-### Add from CDN
-
-Add script and stylesheets files from GitHub
-
-```html
-<script src="https://cdn.rawgit.com/codex-team/js-notifier/master/notifier.js"></script>
-<link rel="stylesheet" href="https://cdn.rawgit.com/codex-team/js-notifier/master/notifier.css">
+const notifier = require('codex-notifier');
 ```
 
 ## Usage

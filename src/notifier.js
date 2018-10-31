@@ -1,22 +1,24 @@
+/**
+ * Add CSS to js-build
+ */
 require('./css/main.css');
 
 /*!
  * Codex JavaScript Notification module
  * https://github.com/codex-team/js-notifier
- *
- * Codex Team - https://ifmo.su
- *
- * MIT License (c) Codex 2018
  */
 module.exports = (function () {
-
-  let draw = require('./draw.js'),
-      bounceInClass = 'cdx-notify--bounce-in';
+  const draw = require('./draw.js');
+  const bounceInClass = 'cdx-notify--bounce-in';
 
   let wrapper_ = null;
 
+  /**
+   *
+   * @return {boolean}
+   * @private
+   */
   function prepare_() {
-
     if (wrapper_) {
       return true;
     }
@@ -46,17 +48,16 @@ module.exports = (function () {
    * @property {String} [inputType]       - (for prompt type only) prompt input type
    */
   function show(options) {
-
     if (!options.message) {
       return;
     }
 
     prepare_();
-    let notify = null,
-        time = options.time || 8000;
+
+    let notify = null;
+    const time = options.time || 8000;
 
     switch (options.type) {
-
       case 'confirm':
         notify = draw.confirm(options);
         break;
@@ -71,16 +72,13 @@ module.exports = (function () {
         window.setTimeout(function () {
           notify.remove();
         }, time);
-
     }
 
     wrapper_.appendChild(notify);
     notify.classList.add(bounceInClass);
-
   }
 
   return {
     show
   };
-
 })({});

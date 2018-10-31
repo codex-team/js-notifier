@@ -1,8 +1,7 @@
-module.exports = function () {
-
+module.exports = (function () {
   const CSS_ = {
-    wrapper : 'cdx-notifies',
-    notification : 'cdx-notify',
+    wrapper: 'cdx-notifies',
+    notification: 'cdx-notify',
     crossBtn: 'cdx-notify__cross',
     okBtn: 'cdx-notify__button--confirm',
     cancelBtn: 'cdx-notify__button--cancel',
@@ -34,10 +33,8 @@ module.exports = function () {
   };
 
   const confirm = function confirm(options) {
-
-    let notify = alert(options);
-
-    let btnsWrapper = document.createElement('div'),
+    let notify = alert(options),
+        btnsWrapper = document.createElement('div'),
         okBtn = document.createElement('button'),
         cancelBtn = document.createElement('button'),
         crossBtn = notify.querySelector(CSS_.crossBtn),
@@ -75,15 +72,13 @@ module.exports = function () {
   };
 
   const prompt = function prompt(options) {
-
-    let notify = alert(options);
-
-    let btnsWrapper = document.createElement('div'),
-      okBtn = document.createElement('button'),
-      input = document.createElement('input'),
-      crossBtn = notify.querySelector(CSS_.crossBtn),
-      cancelHandler = options.cancelHandler,
-      okHandler = options.okHandler;
+    let notify = alert(options),
+        btnsWrapper = document.createElement('div'),
+        okBtn = document.createElement('button'),
+        input = document.createElement('input'),
+        crossBtn = notify.querySelector(CSS_.crossBtn),
+        cancelHandler = options.cancelHandler,
+        okHandler = options.okHandler;
 
     btnsWrapper.classList.add(CSS_.btnsWrapper);
 
@@ -106,17 +101,13 @@ module.exports = function () {
     }
 
     if (cancelHandler && typeof cancelHandler === 'function') {
-      crossBtn.addEventListener('click', cancelHandler)
+      crossBtn.addEventListener('click', cancelHandler);
     }
 
     if (okHandler && typeof okHandler === 'function') {
-
       okBtn.addEventListener('click', function () {
-
         okHandler(input.value);
-
       });
-
     }
 
     okBtn.addEventListener('click', notify.remove.bind(notify));
@@ -130,13 +121,11 @@ module.exports = function () {
   };
 
   const getWrapper = function getWrapper() {
-
     let wrapper = document.createElement('DIV');
 
     wrapper.classList.add(CSS_.wrapper);
 
     return wrapper;
-
   };
 
   return {
@@ -144,6 +133,5 @@ module.exports = function () {
     confirm,
     prompt,
     getWrapper
-  }
-
-}();
+  };
+})();
