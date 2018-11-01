@@ -4,3 +4,4 @@ plugins:
     postcss-nesting: {}
     postcss-nested: {}
     postcss-nested-ancestors: {}
+    postcss-clean: {}
