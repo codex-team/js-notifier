@@ -37,7 +37,7 @@ module.exports = (function () {
         btnsWrapper = document.createElement('div'),
         okBtn = document.createElement('button'),
         cancelBtn = document.createElement('button'),
-        crossBtn = notify.querySelector(CSS_.crossBtn),
+        crossBtn = notify.querySelector(`.${CSS_.crossBtn}`),
         cancelHandler = options.cancelHandler,
         okHandler = options.okHandler;
 
@@ -76,7 +76,7 @@ module.exports = (function () {
         btnsWrapper = document.createElement('div'),
         okBtn = document.createElement('button'),
         input = document.createElement('input'),
-        crossBtn = notify.querySelector(CSS_.crossBtn),
+        crossBtn = notify.querySelector(`.${CSS_.crossBtn}`),
         cancelHandler = options.cancelHandler,
         okHandler = options.okHandler;
 
