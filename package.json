@@ -1,6 +1,6 @@
 {
   "name": "codex-notifier",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Simple notifications for your website",
   "main": "./dist/bundle.js",
   "scripts": {

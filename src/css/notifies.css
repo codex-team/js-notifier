@@ -1,19 +1,19 @@
 .cdx-notify {
 
     &--success {
-        background: #fafffe;
+        background: #fafffe !important;
 
         &::before {
-            background: #41ffb1;
+            background: #41ffb1 !important;
         }
 
     }
 
     &--error {
-        background: #fffbfb;
+        background: #fffbfb !important;
 
         &::before {
-            background: #fb5d5d;
+            background: #fb5d5d !important;
         }
 
     }
