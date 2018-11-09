@@ -2,14 +2,14 @@ export as namespace notifier;
 
 /**
  * Show notification
- * @param {NotificationOptions | ConfirmNotificationOptions | PromptNotificationOptions} options
+ * @param {NotifierOptions | ConfirmNotifierOptions | PromptNotifierOptions} options
  */
-export function show(options: NotificationOptions | ConfirmNotificationOptions | PromptNotificationOptions): void;
+export function show(options: NotifierOptions | ConfirmNotifierOptions | PromptNotifierOptions): void;
 
 /**
  * Base options interface for notifications
  */
-export interface NotificationOptions {
+export interface NotifierOptions {
   /**
    * Notification message (can contains HTML)
    */
@@ -39,7 +39,7 @@ export interface NotificationOptions {
 /**
  * Confirm notification options
  */
-export interface ConfirmNotificationOptions extends NotificationOptions {
+export interface ConfirmNotifierOptions extends NotifierOptions {
   /**
    * Text for confirmation button
    * 'Confirm' by default
@@ -68,7 +68,7 @@ export interface ConfirmNotificationOptions extends NotificationOptions {
 /**
  * Prompt notification options
  */
-export interface PromptNotificationOptions extends NotificationOptions {
+export interface PromptNotifierOptions extends NotifierOptions {
   /**
    * Text for the Submit button
    * 'Ok' by default

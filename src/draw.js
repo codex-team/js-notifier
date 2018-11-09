@@ -11,7 +11,7 @@ module.exports = (function () {
   };
 
   /**
-   * @param {NotificationOptions} options
+   * @param {NotifierOptions} options
    * @return {HTMLElement}
    */
   const alert = function alert(options) {
@@ -37,7 +37,7 @@ module.exports = (function () {
   };
 
   /**
-   * @param {ConfirmNotificationOptions} options
+   * @param {ConfirmNotifierOptions} options
    * @return {HTMLElement}
    */
   const confirm = function confirm(options) {
@@ -80,7 +80,7 @@ module.exports = (function () {
   };
 
   /**
-   * @param {PromptNotificationOptions} options
+   * @param {PromptNotifierOptions} options
    * @return {HTMLElement}
    */
   const prompt = function prompt(options) {
