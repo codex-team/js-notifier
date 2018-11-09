@@ -4,7 +4,7 @@ export as namespace notifier;
  * Show notification
  * @param {NotificationOptions | ConfirmNotificationOptions | PromptNotificationOptions} options
  */
-function show(options: NotificationOptions | ConfirmNotificationOptions | PromptNotificationOptions): void;
+export function show(options: NotificationOptions | ConfirmNotificationOptions | PromptNotificationOptions): void;
 
 /**
  * Base options interface for notifications
