@@ -104,3 +104,5 @@ export interface PromptNotifierOptions extends NotifierOptions {
    */
   default?: string;
 }
+
+export default notifier;
