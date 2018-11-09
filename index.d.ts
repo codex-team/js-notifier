@@ -1,13 +1,10 @@
+export as namespace notifier;
+
 /**
- * Module namespace to be exported
+ * Show notification
+ * @param {NotificationOptions | ConfirmNotificationOptions | PromptNotificationOptions} options
  */
-export namespace notifier {
-  /**
-   * Show notification
-   * @param {NotificationOptions | ConfirmNotificationOptions | PromptNotificationOptions} options
-   */
-  function show(options: NotificationOptions | ConfirmNotificationOptions | PromptNotificationOptions): void;
-}
+function show(options: NotificationOptions | ConfirmNotificationOptions | PromptNotificationOptions): void;
 
 /**
  * Base options interface for notifications
