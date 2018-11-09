@@ -10,6 +10,10 @@ module.exports = (function () {
     btnsWrapper: 'cdx-notify__btns-wrapper'
   };
 
+  /**
+   * @param {NotifierOptions} options
+   * @return {HTMLElement}
+   */
   const alert = function alert(options) {
     let notify = document.createElement('DIV'),
         cross = document.createElement('DIV'),
@@ -32,6 +36,10 @@ module.exports = (function () {
     return notify;
   };
 
+  /**
+   * @param {ConfirmNotifierOptions} options
+   * @return {HTMLElement}
+   */
   const confirm = function confirm(options) {
     let notify = alert(options),
         btnsWrapper = document.createElement('div'),
@@ -71,6 +79,10 @@ module.exports = (function () {
     return notify;
   };
 
+  /**
+   * @param {PromptNotifierOptions} options
+   * @return {HTMLElement}
+   */
   const prompt = function prompt(options) {
     let notify = alert(options),
         btnsWrapper = document.createElement('div'),
