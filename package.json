@@ -1,11 +1,12 @@
 {
   "name": "codex-notifier",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple notifications for your website",
   "main": "./dist/bundle.js",
   "types": "./index.d.ts",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js --mode production --watch"
+    "build": "webpack --config ./webpack.config.js --mode production",
+    "build:dev": "webpack --config ./webpack.config.js --mode development --watch"
   },
   "license": "MIT",
   "author": {

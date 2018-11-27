@@ -1,0 +1,7 @@
+.idea/
+docs/
+node_modules/
+src/
+.eslintrc
+.postcssrc
+webpack.config.js
