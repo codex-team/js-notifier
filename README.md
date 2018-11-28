@@ -4,20 +4,27 @@ Lightweight notification module for websites
 
 ## Instalation
 
-### Install via npm
+### Install via NPM/Yarn
 
 Install package
 
-```
+```shell
 npm install codex-notifier --save
 ```
 
-#### Connect with Webpack
+```shell
+yarn add codex-notifier
+```
 
-Require module in your application
+#### Require module
 
 ```javascript
 const notifier = require('codex-notifier');
+```
+
+```javascript
+import notifier from 'codex-notifier';
+import {ConfirmNotifierOptions, NotifierOptions, PromptNotifierOptions} from 'codex-notifier';
 ```
 
 ## Usage

@@ -44,25 +44,25 @@ export interface ConfirmNotifierOptions extends NotifierOptions {
    * Text for confirmation button
    * 'Confirm' by default
    */
-  okText: string;
+  okText?: string;
 
   /**
    * Confirm button pressing callback
    * @param {MouseEvent} event
    */
-  okHandler: (event: MouseEvent) => void;
+  okHandler?: (event: MouseEvent) => void;
 
   /**
    * Text for cancel button
    * 'Cancel' by default
    */
-  cancelText: string;
+  cancelText?: string;
 
   /**
    * Cancel button or cross button pressing callback
    * @param {MouseEvent} event
    */
-  cancelHandler: (event: MouseEvent) => void;
+  cancelHandler?: (event: MouseEvent) => void;
 }
 
 /**
