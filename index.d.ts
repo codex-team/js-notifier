@@ -1,11 +1,3 @@
-export as namespace notifier;
-
-/**
- * Show notification
- * @param {NotifierOptions | ConfirmNotifierOptions | PromptNotifierOptions} options
- */
-export function show(options: NotifierOptions | ConfirmNotifierOptions | PromptNotifierOptions): void;
-
 /**
  * Base options interface for notifications
  */
@@ -103,6 +95,14 @@ export interface PromptNotifierOptions extends NotifierOptions {
    * Input default value
    */
   default?: string;
+}
+
+declare namespace notifier {
+    /**
+     * Show notification
+     * @param {NotifierOptions | ConfirmNotifierOptions | PromptNotifierOptions} options
+     */
+    export function show(options: NotifierOptions | ConfirmNotifierOptions | PromptNotifierOptions): void;
 }
 
 export default notifier;
