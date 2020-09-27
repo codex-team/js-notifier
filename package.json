@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codex-team/js-notifier.git"
+    "url": "git+https://github.com/sosie-js/js-notifier.git"
   },
   "bugs": {
-    "url": "https://github.com/codex-team/js-notifier/issues"
+    "url": "https://github.com/sosie-js/js-notifier/issues"
   },
   "homepage": "https://github.com/codex-team/js-notifier#readme",
   "devDependencies": {
