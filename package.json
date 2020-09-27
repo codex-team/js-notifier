@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/sosie-js/js-notifier/issues"
   },
-  "homepage": "http://sosie.sos-productions.com/js-notifier/example/",
+  "homepage": "http://sosie.sos-productions.com/js-notifier/example/index.html",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
