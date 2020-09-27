@@ -1,0 +1,141 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Example for codex.js-notifier
+    </title>
+    <style>
+      body {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
+      }
+
+      .table {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .table__row {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .button {
+        display: inline-block;
+        background: #2da0e9;
+        color: #fff;
+        border-radius: 5px;
+        padding: 13px 18px;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background: #1689d2;
+      }
+    </style>
+  </head>
+  <body>
+   <h2>Notification playground</h2>
+    <div class="table">
+        <span class="button" data-placement="bottom" data-type="show">info</span>
+        <span class="button" data-placement="top" data-type="showOK">Ok</span>
+        <span class="button" data-placement="left" data-type="showERROR">Error</span>
+        <span class="button" data-placement="right" data-type="confirm">Confirm</span>
+        <span class="button" data-placement="right" data-type="prompt">Prompt</span>
+    </div>
+    <script src="../dist/bundle.js"></script>
+    <script>
+  
+      const buttons = document.querySelectorAll('.button');
+
+      Array.from(buttons).forEach(button => {
+          if(button.dataset.type == 'show') {
+	    button.addEventListener("click", function() {
+                notifier.show({
+		  message: 'Refresh the page'
+		})
+                return false;
+            }, false);	
+          }
+          if(button.dataset.type == 'showOK') {
+            button.addEventListener("click", function() {
+                notifier.show({
+                message: 'Message was sent',
+                style: 'success',
+                time: 5000
+            })
+              return false;
+            }, false);
+         }
+         if(button.dataset.type == 'showERROR') {
+            button.addEventListener("click", function() {
+               notifier.show({
+                message: 'Sorry, server is busy now',
+                style: 'error'
+                })
+              return false;
+            }, false);
+         }
+         
+        if(button.dataset.type == 'confirm') {
+            const account={
+                delete: function() {
+                     notifier.show({
+                        message: 'Account deleted',
+                        style: 'success',
+                        time: 5000
+                    })
+                }
+            }
+            button.addEventListener("click", function() {
+               notifier.show({
+                message: 'Delete account?',
+                type: 'confirm',
+                okText: 'Yes',
+                cancelText: 'Oh, wait',
+                okHandler: account.delete
+                })
+              return false;
+            }, false);
+         }
+      
+         if(button.dataset.type == 'prompt') {
+         
+            function validateEmail(email) {
+                const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase());
+            }
+
+         
+            const checkEmail= function(email) {
+                if(validateEmail(email)) {
+                     notifier.show({
+                        message: 'Mail sent to'+email,
+                        style: 'success',
+                        time: 5000
+                    })
+                } else {
+                    notifier.show({
+                        message: 'This email is invalid sorry',
+                        style: 'error'
+                    })
+                }
+            }
+            button.addEventListener("click", function() {    
+            notifier.show({
+                message: 'Enter your email',
+                type: 'prompt',
+                okText: 'Enter',
+                okHandler: checkEmail,
+                inputType: 'email',
+                placeholder: 'team@ifmo.su'
+            })
+              return false;
+            }, false);
+         }
+      })
+    </script>
+  </body>
+</html>
+
