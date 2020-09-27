@@ -3,9 +3,10 @@
  */
 require('./css/main.css');
 
-/*!
+/**
  * Codex JavaScript Notification module
- * https://github.com/codex-team/js-notifier
+ *
+ * @see https://github.com/codex-team/js-notifier
  */
 module.exports = (function () {
   const draw = require('./draw.js');
@@ -65,6 +66,6 @@ module.exports = (function () {
   }
 
   return {
-    show
+    show,
   };
 })({});
