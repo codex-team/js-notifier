@@ -38,11 +38,11 @@
   <body>
    <h2>Notification playground</h2>
     <div class="table">
-        <span class="button" data-placement="bottom" data-type="show">info</span>
-        <span class="button" data-placement="top" data-type="showOK">Ok</span>
-        <span class="button" data-placement="left" data-type="showERROR">Error</span>
-        <span class="button" data-placement="right" data-type="confirm">Confirm</span>
-        <span class="button" data-placement="right" data-type="prompt">Prompt</span>
+        <span class="button" data-type="show">info</span>
+        <span class="button" data-type="showOK">Ok</span>
+        <span class="button" data-type="showERROR">Error</span>
+        <span class="button" data-type="confirm">Confirm</span>
+        <span class="button" data-type="prompt">Prompt</span>
     </div>
     <script src="../dist/bundle.js"></script>
     <script>
@@ -53,7 +53,8 @@
           if(button.dataset.type == 'show') {
 	    button.addEventListener("click", function() {
                 notifier.show({
-		  message: 'Refresh the page'
+		  message: 'Refresh the page',
+		  layout: 'middle'
 		})
                 return false;
             }, false);	
@@ -63,7 +64,7 @@
                 notifier.show({
                 message: 'Message was sent',
                 style: 'success',
-                time: 5000
+                time: 5000,
             })
               return false;
             }, false);
