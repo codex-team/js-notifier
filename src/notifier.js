@@ -3,28 +3,35 @@
  */
 require('./css/main.css');
 
-/*!
+/**
  * Codex JavaScript Notification module
- * https://github.com/codex-team/js-notifier
+ *
+ * @see https://github.com/sosie-js/js-notifier
  */
 module.exports = (function () {
   const draw = require('./draw.js');
   const bounceInClass = 'cdx-notify--bounce-in';
 
-  let wrapper_ = null;
-
+  
+  const wrappers_ = {};
+  
   /**
    * @private
-   * @return {boolean}
+   * @param {String} layout - either 'middle' or string with comma holding a combinaison of 'top' or 'bottom' with 'left' or 'right'
+   * @returns {boolean}
    */
-  function prepare_() {
-    if (wrapper_) {
-      return true;
+  function prepare_(layout) {
+      
+    let wrapper_;
+    
+    if (Object.prototype.hasOwnProperty.call(wrappers_,layout)) {
+      wrapper_ = wrappers_[layout]; 
+    } else {
+      wrapper_ = draw.getWrapper(layout.split(','));
+      wrappers_[layout] = wrapper_;
     }
-
-    wrapper_ = draw.getWrapper();
-
     document.body.appendChild(wrapper_);
+    return wrapper_;
   }
 
   /**
@@ -37,7 +44,7 @@ module.exports = (function () {
       return;
     }
 
-    prepare_();
+    const wrapper_ = prepare_(options.layout || 'bottom,left');
 
     let notify = null;
 
@@ -65,6 +72,6 @@ module.exports = (function () {
   }
 
   return {
-    show
+    show,
   };
 })({});

@@ -1,10 +1,11 @@
 {
   "name": "codex-notifier",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Simple notifications for your website",
   "main": "./dist/bundle.js",
   "types": "./index.d.ts",
   "scripts": {
+    "eslint": "eslint --debug src/notifier.js",
     "build": "webpack --config ./webpack.config.js --mode production",
     "build:dev": "webpack --config ./webpack.config.js --mode development --watch"
   },
@@ -15,20 +16,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codex-team/js-notifier.git"
+    "url": "git+https://github.com/sosie-js/js-notifier.git"
   },
   "bugs": {
-    "url": "https://github.com/codex-team/js-notifier/issues"
+    "url": "https://github.com/sosie-js/js-notifier/issues"
   },
-  "homepage": "https://github.com/codex-team/js-notifier#readme",
+  "homepage": "http://sosie.sos-productions.com/js-notifier/example/index.html",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
+    "caniuse-db": "^1.0.30000652",
+    "core-js": "^3.6.5",
     "css-loader": "^1.0.0",
-    "eslint": "^5.8.0",
-    "eslint-config-codex": "github:codex-team/eslint-config",
-    "eslint-loader": "^2.1.1",
+    "eslint": "^7.10.0",
+    "eslint-config-codex": "^1.3.6",
+    "eslint-loader": "^4.0.2",
     "postcss-clean": "^1.1.0",
     "postcss-cssnext": "^2.11.0",
     "postcss-loader": "^2.0.6",
@@ -44,5 +47,6 @@
     "presets": [
       "env"
     ]
-  }
+  },
+  "dependencies": {}
 }

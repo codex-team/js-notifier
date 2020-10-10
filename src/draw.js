@@ -132,11 +132,17 @@ module.exports = (function () {
     return notify;
   };
 
-  const getWrapper = function getWrapper() {
+  const getWrapper = function getWrapper(layout) {
     let wrapper = document.createElement('DIV');
 
+    
     wrapper.classList.add(CSS_.wrapper);
 
+    for (const l in layout) {
+      wrapper.classList.add('cdx-notifies-' + layout[l]);
+    }
+    
+    
     return wrapper;
   };
 

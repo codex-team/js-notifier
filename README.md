@@ -2,6 +2,11 @@
 
 Lightweight notification module for websites
 
+# What's news doc?
+
+- 1.1.3  Fixed incompatibility with eslint 6-7x in formatters/stylish, and provide the example
+- 1.2.0  Layout support has been added:  (Live demo)[http://sosie.sos-productions.com/js-notifier/example/index.html]
+
 ## Instalation
 
 ### Install via NPM/Yarn
@@ -38,6 +43,7 @@ You should pass there object with notification properties
 - `type` — type of notification: `alert`, `confirm` or `prompt`. `Alert` by default
 - `style` — just add `'cdx-notify--' + style` class. We have some default styles: `success` and `error`
 - `time` — notification expire time in ms. Only for `alert` notifies expires (8s by default)
+- `layout` — either 'middle' or string with comma holding a combinaison of 'top' or 'bottom' with 'left' or 'right'
 
 #### Confirm notifications properties
 

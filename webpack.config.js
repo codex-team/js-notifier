@@ -7,7 +7,13 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           'babel-loader',
-          'eslint-loader'
+           {
+              loader: 'eslint-loader',
+              options: {
+                 formatter: require('eslint/lib/cli-engine/formatters/stylish') /*eslint 6.x+:*/
+               /* formatter: require('eslint/lib/formatters/stylish') /*eslint 5.x*/
+              },
+           }
         ]
       },
       {
